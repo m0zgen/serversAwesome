@@ -9,6 +9,7 @@ Awesome Servers Inventory Web App, which is a simple web app to manage your serv
 - Edit existing server
 - Delete existing server
 - Copy server IP details to clipboard
+- Export data to CSV file
 - Yaml config file
 - Portable sqLite database
 - One binary file to run the app

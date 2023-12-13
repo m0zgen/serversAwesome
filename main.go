@@ -132,6 +132,30 @@ func main() {
 		c.Redirect(302, "/")
 	})
 
+	// ...
+
+	// Маршрут для экспорта данных в CSV
+	r.GET("/export", func(c *gin.Context) {
+		var servers []Server
+		db.Find(&servers)
+
+		if len(servers) == 0 {
+			c.String(200, "No data to export")
+			return
+		}
+
+		// Формирование CSV
+		csvData := "Name,IP Address, IPv6 Address,Location,Hoster,Comment\n"
+		for _, server := range servers {
+			// Заключаем каждое поле в двойные кавычки
+			csvData += fmt.Sprintf("\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",\"%s\"\n", server.Name, server.IPAddress, server.IP6Address, server.Location, server.Hoster, server.Comment)
+		}
+
+		// Отправка CSV клиенту
+		c.Header("Content-Disposition", "attachment;filename=servers.csv")
+		c.Data(200, "text/csv", []byte(csvData))
+	})
+
 	// Получение IP-адреса и порта сервера
 	host, port, err := net.SplitHostPort(os.Getenv("HOST"))
 	if err != nil {

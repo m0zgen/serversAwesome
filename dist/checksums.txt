@@ -1,0 +1,2 @@
+f74d36f378222bc74b084c85bd9d0032097502781d2d15038b63bc1b03330ccb  serversAwesome_0.1.0_darwin_amd64.tar.gz
+2b3f9fbb5dd247c4820122c2619633f3fca9e1c67f8133d241017fa744ec2a14  serversAwesome_0.1.0_linux_amd64.tar.gz
