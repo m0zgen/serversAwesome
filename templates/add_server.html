@@ -4,56 +4,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Добавление нового сервера</title>
+    <title>Servers Awesome - Adding new server</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
 </head>
 <body>
 <section class="section">
     <div class="container">
-        <h1 class="title">Добавление нового сервера</h1>
+        <h1 class="title">Adding new server</h1>
         <form action="/add_server" method="post">
             <div class="field">
-                <label class="label">Имя</label>
+                <label class="label">Name</label>
                 <div class="control">
-                    <input class="input" type="text" name="Name" placeholder="Введите имя" required>
+                    <input class="input" type="text" name="Name" placeholder="Enter server name" required>
                 </div>
             </div>
             <div class="field">
-                <label class="label">IP-адрес</label>
+                <label class="label">IP-address</label>
                 <div class="control">
-                    <input class="input" type="text" name="IPAddress" placeholder="Введите IP-адрес" required>
+                    <input class="input" type="text" name="IPAddress" placeholder="Enter IP-address" required>
                 </div>
             </div>
             <div class="field">
-                <label class="label">IPv6-адрес</label>
+                <label class="label">IPv6-address</label>
                 <div class="control">
-                    <input class="input" type="text" name="IP6Address" placeholder="Введите IP-адрес" required>
+                    <input class="input" type="text" name="IP6Address" placeholder="Enter IP-address" required>
                 </div>
             </div>
             <div class="field">
-                <label class="label">Локация</label>
+                <label class="label">Location</label>
                 <div class="control">
-                    <input class="input" type="text" name="Location" placeholder="Введите локацию">
+                    <input class="input" type="text" name="Location" placeholder="Enter location">
                 </div>
             </div>
             <div class="field">
-                <label class="label">Хостер</label>
+                <label class="label">Hosted</label>
                 <div class="control">
-                    <input class="input" type="text" name="Hoster" placeholder="Введите хостера">
+                    <input class="input" type="text" name="Hoster" placeholder="Enter hosting name">
                 </div>
             </div>
             <div class="field">
-                <label class="label">Комментарий</label>
+                <label class="label">Comment</label>
                 <div class="control">
-                    <textarea class="textarea" name="Comment" placeholder="Введите комментарий"></textarea>
+                    <textarea class="textarea" name="Comment" placeholder="Enter comment"></textarea>
                 </div>
             </div>
             <div class="field is-grouped is-grouped-multiline">
                 <div class="control">
-                    <button class="button is-success" type="submit">Добавить сервер</button>
+                    <button class="button is-success" type="submit">Add server</button>
                 </div>
                 <div class="control">
-                    <a class="button is-link" href="/">Назад</a>
+                    <a class="button is-link" href="/">Back</a>
                 </div>
             </div>
         </form>
