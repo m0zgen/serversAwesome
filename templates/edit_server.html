@@ -1,0 +1,77 @@
+<!-- edit_server.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Редактирование сервера</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+</head>
+<body>
+<section class="section">
+    <div class="container">
+        <h1 class="title">Редактирование сервера</h1>
+        <form action="/edit_server/{{ .server.ID }}" method="POST">
+            <div class="field">
+                <label class="label" for="Name">Имя</label>
+                <div class="control">
+                    <input class="input" type="text" name="Name" value="{{ .server.Name }}" required><br>
+                </div>
+            </div>
+            <div class="field">
+                <label class="label" for="IPAddress" >IP-адрес</label>
+                <div class="control">
+                    <input class="input" type="text" name="IPAddress" value="{{ .server.IPAddress }}" required><br>
+                </div>
+            </div>
+            <div class="field">
+                <label class="label" for="IP6Address" >IPv6-адрес</label>
+                <div class="control">
+                    <input class="input" type="text" name="IP6Address" value="{{ .server.IP6Address }}" required><br>
+                </div>
+            </div>
+            <div class="field">
+                <label class="label" for="Location" >Локация</label>
+                <div class="control">
+                    <input class="input" type="text" name="Location" value="{{ .server.Location }}" required><br>
+                </div>
+            </div>
+            <div class="field">
+                <label class="label" for="Hoster">Хостер</label>
+                <div class="control">
+                    <input class="input" type="text" name="Hoster" value="{{ .server.Hoster }}" required><br>
+                </div>
+            </div>
+            <div class="field">
+                <label class="label" for="Comment">Комментарий</label>
+                <div class="control">
+                    <textarea class="textarea" name="Comment">{{ .server.Comment }}</textarea>
+                </div>
+            </div>
+            <div class="field is-grouped is-grouped-multiline">
+                <div class="control">
+                    <button class="button is-success" type="submit">Обновить сервер</button>
+                </div>
+                <div class="control">
+                    <a class="button is-link" href="/">Назад</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
+</body>
+</html>
+
+<h1>Редактировать сервер</h1>
+<form action="/edit_server/{{ .server.ID }}" method="POST">
+    <label for="Name">Имя:</label>
+    <input type="text" name="Name" value="{{ .server.Name }}" required><br>
+    <label for="IPAddress">IP-адрес:</label>
+    <input type="text" name="IPAddress" value="{{ .server.IPAddress }}" required><br>
+    <label for="Location">Локация:</label>
+    <input type="text" name="Location" value="{{ .server.Location }}" required><br>
+    <label for="Hoster">Хостер:</label>
+    <input type="text" name="Hoster" value="{{ .server.Hoster }}" required><br>
+    <label for="Comment">Комментарий:</label>
+    <input type="text" name="Comment" value="{{ .server.Comment }}"><br>
+    <input type="submit" value="Сохранить изменения">
