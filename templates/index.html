@@ -28,8 +28,8 @@
       <tbody>
       {{ range .servers }}
       <tr>
-        <td>{{ .ID }}</td>
-        <td>{{ .Name }}</td>
+        <td class="field is-vcentered is-centered">{{ .ID }}</td>
+        <td class="is-vcentered is-centered">{{ .Name }}</td>
         <td>
           <div class="field has-addons">
             <p class="control is-expanded">
@@ -58,9 +58,9 @@
             </p>
           </div>
         </td>
-        <td>{{ if .Location }}{{ .Location }}{{ else }}N/A{{ end }}</td>
-        <td>{{ if .Hoster }}{{ .Hoster }}{{ else }}N/A{{ end }}</td>
-        <td>{{ .Comment }}</td>
+        <td class="field is-vcentered is-centered">{{ if .Location }}{{ .Location }}{{ else }}N/A{{ end }}</td>
+        <td class="field is-vcentered is-centered">{{ if .Hoster }}{{ .Hoster }}{{ else }}N/A{{ end }}</td>
+        <td class="field is-vcentered is-centered">{{ .Comment }}</td>
         <td>
           <div class="buttons">
             <a class="button is-info" href="/edit_server/{{ .ID }}">
