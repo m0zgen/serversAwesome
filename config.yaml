@@ -1,0 +1,5 @@
+# config.yaml
+database:
+  name: servers.db
+server:
+  port: 8080
